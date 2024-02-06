@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #17171c;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  width: 900px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0 16px;
+}
+
+.row div {
+  padding: 12px;
+  border-radius: 24px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.row:first-child div {
+  background-color: #4e505f;
+}
+
+.row div:last-child {
+  background-color: #4b5efc;
+}
+
+.row div{
+  cursor: pointer;
+}
+
+.operators div {
+  background: #4e505f;
+}
+
+.old {
+  height: 47px;
+  margin-bottom: 16px;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 47px;
+  color: #ffffff;
+text-align: end;
+  opacity: 0.4;
+}
+
+.total {
+  text-align: end;
+  height: 96px;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 96px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}

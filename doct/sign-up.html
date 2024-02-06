@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asserts/css/reset.css" />
+    <link rel="stylesheet" href="./asserts/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./asserts/css/sign-up.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row container">
+        <div class="content">
+          <h1 class="heading">Sign Up</h1>
+          <p class="desc">Enter details to create your account</p>
+          <form action="#" class="sign-up">
+            <div class="input-group g-20">
+              <button class="btn btn-actor select">Doctor</button>
+              <button class="btn btn-actor">Patient</button>
+            </div>
+            <div class="input-group g-20">
+              <input type="text" name="first-name" placeholder="First Name" />
+              <input type="text" name="last-name" placeholder="Last Name" />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                name="email"
+                placeholder="hellouihut@gmail.com"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                name="password"
+                placeholder="Create Password"
+              />
+              <img src="./asserts/images/Eye-on.svg" alt="Eye-on" class="eye" />
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                name="confirm-password"
+                placeholder="Confirm Password"
+              />
+              <img src="./asserts/images/Eye-on.svg" alt="Eye-on" class="eye" />
+            </div>
+            <div class="input-group g-20">
+              <div class="select-block">
+                <div class="input-select g-20">
+                  <span>+088</span>
+                  <img src="./asserts/images/arrow-down.svg" alt="arrow-down" />
+                </div>
+              </div>
+              <input
+                type="text"
+                name="phone-number"
+                placeholder="Phone number"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                name="address"
+                placeholder="Enter your address"
+              />
+            </div>
+            <div class="input-group g-8">
+              <input
+                type="checkbox"
+                name="condition"
+                id="condition"
+                class="input-checkbox"
+              />
+              <div class="box-checkbox">
+                <img src="./asserts/images/Check/Vector.svg" alt="" />
+              </div>
+              <label for="condition" class="text-condition">
+                By sign up I agree with
+                <a href="#!" class="link">Termes and condition</a>
+              </label>
+            </div>
+            <div class="input-group">
+              <button type="submit" class="btn">Sign Up</button>
+            </div>
+            <div class="input-group">
+              <span class="text"
+                >You have account already?
+                <a href="#!" class="link">Sign In</a></span
+              >
+            </div>
+          </form>
+        </div>
+        <div class="image-block">
+          <img src="./asserts/images/bg.png" alt="background" class="bg" />
+          <img src="./asserts/images/logo.svg" alt="C+ Doct" class="logo" />
+        </div>
+      </div>
+    </div>
+    <script src="./asserts/js/sign-up.js"></script>
+  </body>
+</html>

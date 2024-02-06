@@ -1,0 +1,135 @@
+.flavor {
+  padding: 55px 0;
+  margin-bottom: 69px;
+  &-container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 140px;
+  }
+  &-block {
+    width: calc(100% - 356px - 140px);
+    position: relative;
+    > img {
+      margin-left: auto;
+    }
+    img {
+      &:not(:first-child) {
+        position: absolute;
+      }
+      &:nth-of-type(2) {
+        bottom: 54px;
+        left: 0;
+      }
+      &:nth-of-type(3) {
+        right: 0;
+        top: 100px;
+      }
+      &:nth-of-type(4) {
+        right: -100px;
+        bottom: 0;
+      }
+    }
+  }
+  &-quality {
+    position: absolute;
+    top: 71px;
+    left: 0;
+    padding: 20px 22px;
+    background: #ffffff;
+    box-shadow: 30px 50px 80px rgba(174, 50, 0, 0.09);
+    border-radius: 8px 8px 8px 0px;
+    b {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #292019;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px 0;
+    }
+    li {
+      width: 144px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0 8px;
+      padding: 6px 10px;
+      background: #fff8f7;
+      border: 1px solid #fbefeb;
+      border-radius: 4px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 10px;
+      color: #292019;
+    }
+  }
+  &-content {
+    width: 356px;
+  }
+  &-heading {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 56px;
+    letter-spacing: -0.01em;
+    color: #292019;
+    position: relative;
+    margin-bottom: 14px;
+    &::before {
+      content: "WHY CHOOSE US";
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.42em;
+      color: #ff1919;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(calc(-100% - 10px));
+    }
+  }
+  &-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: #594d43;
+    margin-bottom: 30px;
+  }
+  &-app {
+    display: flex;
+    padding: 16px 12px 20px 16px;
+    background: #fff5f4;
+    border-radius: 8px;
+    gap: 0 20px;
+    &--image {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      background: #ffffff;
+      box-shadow: 20px 25px 70px rgba(249, 218, 213, 0.8);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &--title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      color: #292019;
+      margin-bottom: 10px;
+    }
+    &--desc {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 22px;
+      color: #6f6863;
+    }
+  }
+}

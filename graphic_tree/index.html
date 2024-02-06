@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Tree</title>
+  </head>
+  <body>
+    <div class="container p-5">
+      <form id="form" class="d-flex flex-lg-column gap-1">
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+            style="height: 100px"
+          ></textarea>
+          <label for="floatingTextarea2">Comments</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script>
+      window.onload = function () {
+        var form = document.getElementById("form");
+        form.addEventListener("submit", submit);
+        console.log(document.querySelector("button"));
+        document.querySelector("button").addEventListener("click", (e) => {
+          window.location.href = "tree.html";
+        });
+      };
+
+      var submit = function (event) {
+        event.preventDefault();
+        window.localStorage.data =
+          document.getElementById("floatingTextarea2").value;
+        // Save all the other fields
+        // You either return a non-false value here and let the form submit
+        // Or you return false and do a window.location change
+      };
+    </script>
+  </body>
+</html>

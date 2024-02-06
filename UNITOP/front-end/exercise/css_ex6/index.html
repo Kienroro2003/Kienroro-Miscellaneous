@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise css 6q</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      #wrapper #header h1.title {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      #wrapper #content {
+        max-width: 100%;
+      }
+
+      #wrapper #content ul.list-product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      #wrapper #content ul.list-product li {
+        flex: 1 2 33%;
+        margin-bottom: 30px;
+        padding: 15px;
+      }
+
+      #wrapper #content ul.list-product li .product-item {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s;
+      }
+
+      #wrapper #content ul.list-product li .product-item a{
+        display: block;
+      }
+
+      #wrapper #content ul.list-product li .product-item:hover a img{
+        transform: rotate(1deg);
+        transition: transform 0.3s;
+      }
+
+      #wrapper #content ul.list-product li .product-item:hover {
+        border-color: tomato;
+      }
+
+      #wrapper #content ul.list-product li .product-item .price {
+        color: orange;
+        font-size: 20px;
+        margin: 10px;
+        font-weight: bold;
+      }
+
+      #wrapper #content ul.list-product li .product-item .buy-now {
+        position: absolute;
+        bottom: -41px;
+        width: 100%;
+        background-color: orange;
+        left: 0;
+        padding: 10px;
+        color: white;
+        transition: bottom 0.5s;
+      }
+
+      #wrapper #content ul.list-product li .product-item:hover .buy-now {
+        bottom: 0;
+        transition: bottom 0.5s;
+      }
+
+      #wrapper #content ul.list-product li .product-item .sale {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <h1 class="title">Bài tập 8 - hiển thị hiệu ứng css</h1>
+      </div>
+      <div id="content">
+        <ul class="list-product">
+          <li>
+            <div class="product-item">
+              <a href=""><img src="./images/product1.jpg" alt="" /></a>
+              <div class="price">499.000đ</div>
+              <a href="" class="product-name">Lorem ipsum dolor sit amet.</a>
+              <a href="" class="buy-now">Mua ngay</a>
+              <span class="sale">
+                <img src="./images/sale.png" alt="" />
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <a href=""><img src="./images/product11.jpg" alt="" /></a>
+              <div class="price">499.000đ</div>
+              <a href="" class="product-name">Lorem ipsum dolor sit amet.</a>
+              <a href="" class="buy-now">Mua ngay</a>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <a href=""><img src="./images/product5.jpg" alt="" /></a>
+              <div class="price">499.000đ</div>
+              <a href="" class="product-name">Lorem ipsum dolor sit amet.</a>
+              <a href="" class="buy-now">Mua ngay</a>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <a href=""><img src="./images/product9.jpg" alt="" /></a>
+              <div class="price">499.000đ</div>
+              <a href="" class="product-name">Lorem ipsum dolor sit amet.</a>
+              <a href="" class="buy-now">Mua ngay</a>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <a href=""><img src="./images/product11.jpg" alt="" /></a>
+              <div class="price">499.000đ</div>
+              <a href="" class="product-name">Lorem ipsum dolor sit amet.</a>
+              <a href="" class="buy-now">Mua ngay</a>
+              <span class="sale">
+                <img src="./images/sale.png" alt="" />
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="product-item">
+              <a href=""><img src="./images/product5.jpg" alt="" /></a>
+              <div class="price">499.000đ</div>
+              <a href="" class="product-name">Lorem ipsum dolor sit amet.</a>
+              <a href="" class="buy-now">Mua ngay</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+#header {
+  padding: 2.5rem 0 3rem;
+  background-color: #fffefe;
+  
+}

@@ -1,0 +1,9 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+#header {
+  @include size(100%, 5rem);
+  background-color: tomato;
+}

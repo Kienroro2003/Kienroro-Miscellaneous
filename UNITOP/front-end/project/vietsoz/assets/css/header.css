@@ -1,0 +1,42 @@
+#header {
+  padding: 2.5rem 0 3rem;
+  background-color: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-weight: normal;
+  font-size: 2rem;
+}
+.navbar__link {
+  margin-right: 5rem;
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.navbar__item {
+  color: #000000;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  position: relative;
+  margin-right: 2rem;
+}
+.navbar__item:nth-child(2)::before {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*# sourceMappingURL=header.css.map */

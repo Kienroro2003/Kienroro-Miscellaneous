@@ -1,0 +1,20 @@
+@use "./global.scss" as g;
+
+#header {
+  padding: 2.5rem 0 3rem;
+  background-color: tomato;
+}
+
+.navbar {
+  @include g.flexbox(center);
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: normal;
+  &__menu{
+    @include g.flexbox(center,space-between);
+  }
+  &__item{
+    text-transform: uppercase;
+    // padding: 
+  }
+}

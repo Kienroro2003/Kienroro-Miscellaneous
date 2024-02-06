@@ -1,0 +1,141 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin maxWidth($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+form {
+  display: inline-block;
+}
+
+.product-hot {
+  margin-top: 5rem;
+  &__heading {
+    font-size: 34px;
+    color: #000000;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5.8rem;
+    position: relative;
+    &-text {
+      display: inline-block;
+      background-color: white;
+      padding: 0 2rem;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include size(50%, 2px);
+        background-color: #000000;
+        z-index: -2;
+      }
+    }
+  }
+  &__list {
+    @include flexbox(center, flex-start, row, wrap);
+    text-align: center;
+    position: relative;
+    font-size: 18px;
+    margin-left: -1.2rem;
+    &::before,
+    &::after {
+      @include size(5.5rem);
+      @include flexbox(center, center);
+      content: "\f105";
+      font: var(--fa-font-solid);
+      color: white;
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+      background-color: #e2868c;
+    }
+    &::before {
+      left: 1.2rem;
+      transform: translate(-50%, calc(-50%)) rotateZ(180deg);
+      text-align: center;
+    }
+    &::after {
+      right: 0;
+      transform: translate(50%, -50%);
+      text-align: center;
+    }
+  }
+  &__item {
+    max-width: calc(100% / 4 - 1.2rem);
+    border: 1px solid #c9c9c9;
+    margin-bottom: 1.2rem;
+    // &:not(:first-child) {
+    margin-left: 1.2rem;
+    // }
+  }
+  &__image {
+    border-bottom: 1px solid #c9c9c9;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+  }
+  &__name {
+    color: #212221;
+    margin-bottom: 2rem;
+  }
+  &__price {
+    margin-bottom: 2rem;
+    &-new {
+      font-weight: bold;
+      color: #b74852;
+      margin-right: 1rem;
+    }
+    &-old {
+      color: #8c8c8c;
+    }
+  }
+  &__add {
+    padding: 1.5rem 5rem;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    color: #444343;
+    background-color: #eeeeee;
+    border-radius: 2rem;
+    font-weight: bold;
+    margin-bottom: 2.1rem;
+    transition: all 0.2s ease-in;
+    &:hover {
+      background-color: #b74852;
+      color: white;
+    }
+  }
+}
+
+@include maxWidth(767px) {
+  .product-hot {
+    max-width: 30rem;
+    margin: 0 auto;
+    &__list{
+      margin: 0;
+    }
+    &__item{
+      max-width: 100%;
+    }
+  }
+}

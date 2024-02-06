@@ -1,0 +1,126 @@
+form {
+  display: inline-block;
+}
+
+.product-hot {
+  margin-top: 5rem;
+}
+.product-hot__heading {
+  font-size: 34px;
+  color: #000000;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5.8rem;
+  position: relative;
+}
+.product-hot__heading-text {
+  display: inline-block;
+  background-color: white;
+  padding: 0 2rem;
+}
+.product-hot__heading-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 2px;
+  background-color: #000000;
+  z-index: -2;
+}
+.product-hot__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+  margin-left: -1.2rem;
+}
+.product-hot__list::before, .product-hot__list::after {
+  width: 5.5rem;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  content: "\f105";
+  font: var(--fa-font-solid);
+  color: white;
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  background-color: #e2868c;
+}
+.product-hot__list::before {
+  left: 1.2rem;
+  transform: translate(-50%, -50%) rotateZ(180deg);
+  text-align: center;
+}
+.product-hot__list::after {
+  right: 0;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+.product-hot__item {
+  max-width: calc(25% - 1.2rem);
+  border: 1px solid #c9c9c9;
+  margin-bottom: 1.2rem;
+  margin-left: 1.2rem;
+}
+.product-hot__image {
+  border-bottom: 1px solid #c9c9c9;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+.product-hot__name {
+  color: #212221;
+  margin-bottom: 2rem;
+}
+.product-hot__price {
+  margin-bottom: 2rem;
+}
+.product-hot__price-new {
+  font-weight: bold;
+  color: #b74852;
+  margin-right: 1rem;
+}
+.product-hot__price-old {
+  color: #8c8c8c;
+}
+.product-hot__add {
+  padding: 1.5rem 5rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  color: #444343;
+  background-color: #eeeeee;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-bottom: 2.1rem;
+  transition: all 0.2s ease-in;
+}
+.product-hot__add:hover {
+  background-color: #b74852;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .product-hot {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+  .product-hot__list {
+    margin: 0;
+  }
+  .product-hot__item {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

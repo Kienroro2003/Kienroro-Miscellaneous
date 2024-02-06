@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector thuoc tinh</title>
+  </head>
+  <body>
+    <style>
+        a[href]{
+            color: cyan; 
+        }
+        a[href$="com"]{
+            color:red;
+        }
+        a[href*="bootstrap"]{
+            color:violet;
+        }
+    </style>
+    <h1>Attribute Selector</h1>
+    <a href="php.com">Php Master</a>
+    <a href="bootstrap.vn">Bootstrap A-Z</a>
+  </body>
+</html>

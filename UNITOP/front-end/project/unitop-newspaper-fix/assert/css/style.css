@@ -1,0 +1,123 @@
+#wrapper #header {
+  padding: 28px 0 9px;
+  background-color: #23282c;
+  margin-bottom: 32px;
+}
+
+#wrapper #header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#wrapper #header .container form {
+  width: 237px;
+  height: 42px;
+  position: relative;
+}
+
+#wrapper #header .container form input {
+  width: inherit;
+  height: inherit;
+  outline: none;
+  border: none;
+  background-color: #131518;
+  padding: 0px 40px 0px 13px;
+  color: #898887;
+}
+
+#wrapper #header .container form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  background-color: #131518;
+  color: #898887;
+}
+
+#wrapper #header .container nav {
+  margin-top: 7px;
+  border-right: 10px solid red;
+  width: 100%;
+  display: block;
+}
+
+#wrapper #header .container nav ul {
+  display: flex;
+}
+
+#wrapper #header .container nav ul li a {
+  color: #edeeee;
+  padding: 12px 17px 7px;
+  display: inline-block;
+}
+
+#wrapper #header .container nav ul li:first-child a {
+  padding-left: 0;
+}
+
+#wrapper #header .container nav ul li a:hover {
+  color: #4eb2eb;
+}
+
+#wrapper #wp-featured-post .featured-post .box-head {
+  background-color: #24282e;
+  margin-bottom: 20px;
+}
+
+/* #wrapper #wp-featured-post .featured-post .box-body {
+} */
+
+#wrapper #wp-featured-post .featured-post .box-body ul.list-featured-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 5rem;
+}
+
+#wrapper #wp-featured-post .featured-post .box-body ul.list-featured-post li {
+  width: 360px;
+  color: #6d6e6e;
+}
+
+#wrapper #wp-featured-post .featured-post .box-body ul.list-featured-post li a {
+  display: inline-block;
+}
+
+#wrapper
+  #wp-featured-post
+  .featured-post
+  .box-body
+  ul.list-featured-post
+  li
+  a
+  img {
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+#wrapper
+  #wp-featured-post
+  .featured-post
+  .box-body
+  ul.list-featured-post
+  li:hover
+  a {
+  color: #4cb2ec;
+}
+
+#wrapper #wp-featured-post .featured-post .box-body ul.list-featured-post li a {
+  color: #6d6e6e;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.new-post .box-head {
+  background-color: #4cb2ec;
+}
+
+.new-post .box-head h3 {
+  border-bottom: 2px solid #4cb2ec;
+}

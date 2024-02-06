@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector checked</title>
+    <style>
+        input:checked + label{
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Selector checked</h1>
+    <form action="">
+      <input type="radio" name="gender" value="male" id="male" />
+      <label for="male">Nam</label><br>
+      <input type="radio" name="gender" value="female" id="female" />
+      <label for="female">Nu</label><br><br>
+      <button>Đăng nhập</button>
+    </form>
+  </body>
+</html>

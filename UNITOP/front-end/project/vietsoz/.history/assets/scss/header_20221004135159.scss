@@ -1,0 +1,13 @@
+@use "./global.scss" as g;
+
+#header {
+  padding: 2.5rem 0 3rem;
+  background-color: tomato;
+}
+
+.navbar {
+  @include g.flexbox(center, space-between);
+  &__menu{
+    @include g.flexbox
+  }
+}

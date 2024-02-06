@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3</title>
+    <style>
+        *,*::after,*::before{
+            box-sizing: border-box;
+        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+
+      .clear-both {
+        clear: both;
+      }
+      #wrapper {
+        box-sizing: border-box;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #wrapper #header {
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+
+      #wrapper #wp-content {
+        min-height: 800px;
+        box-sizing: border-box;
+      }
+
+      #wrapper #wp-content #content {
+        width: 600px;
+        float: left;
+        background-color: #f5f5f5;
+        min-height: inherit;
+        padding: 15px;
+      }
+
+      #wrapper #wp-content #sidebar {
+        width: 360px;
+        float: left;
+        background-color: #e4e4e4;
+        min-height: inherit;
+        padding: 15px;
+      }
+
+      #wrapper #footer {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">Layout web Cột - Float Css</div>
+      <div id="wp-content">
+        <div id="content">Content</div>
+        <div id="sidebar">Sidebar</div>
+        <div class="clear-both"></div>
+      </div>
+      <div id="footer">unitop.vn</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear fix</title>
+    <style>
+      .box-parent {
+        width: 960px;
+        margin: 0 auto;
+        background-color: tomato;
+      }
+
+      .box-parent::after {
+        content: ".";
+        clear: both;
+        line-height: 0;
+        display: block;
+        visibility: hidden;
+      }
+      .box-left,
+      .box-right {
+        float: left;
+        min-height: 600px;
+      }
+
+      .box-left {
+        width: 600px;
+        background-color: aqua;
+      }
+      .box-right {
+        width: 360px;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Class clear fix</h1>
+    <div class="box-parent">
+      <div class="box-left">LEFT</div>
+      <div class="box-right">RIGHT</div>
+    </div>
+  </body>
+</html>

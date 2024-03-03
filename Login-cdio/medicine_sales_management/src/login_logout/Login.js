@@ -37,35 +37,36 @@ const Login = () => {
     e.preventDefault();
     // fetch api login
     console.log({ email, password });
-    const loginResponse = await axios.post(
-      "http://localhost:8080/api/auth/login",
-      {
-        username: email,
-        password: password,
-      },
-      {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+    try {
+      const loginResponse = await axios.post(
+        "http://localhost:8080/api/auth/login",
+        {
+          username: email,
+          password: password,
         },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(loginResponse);
+      if (loginResponse?.status === 200) {
+        const roles = loginResponse?.data?.roles;
+        //   setAuth({ ...auth, refreshToken, accessToken, type, roles });
+        //   localStorage.setItem(
+        //     "auth",
+        //     JSON.stringify({ ...auth, refreshToken, accessToken, type, roles })
+        //   );
+        // navigation
+        handleNavigate(roles);
+      } else {
+        if (loginResponse?.response?.status === 401)
+          notify("Mật khẩu không chính xác!", "error");
+        else notify("Email chưa được đăng ký!", "error");
       }
-    );
-    console.log(loginResponse);
-    if (loginResponse?.status === 200) {
-      const accessToken = loginResponse?.data?.accessToken;
-      const refreshToken = loginResponse?.data?.refreshToken;
-      const type = loginResponse?.data?.type;
-      const roles = loginResponse?.data?.roles;
-      //   setAuth({ ...auth, refreshToken, accessToken, type, roles });
-      //   localStorage.setItem(
-      //     "auth",
-      //     JSON.stringify({ ...auth, refreshToken, accessToken, type, roles })
-      //   );
-      // navigation
-      handleNavigate(roles);
-    } else {
-      if (loginResponse?.response?.status === 401)
-        notify("Mật khẩu không chính xác!", "error");
-      else notify("Email chưa được đăng ký!", "error");
+    } catch (e) {
+      notify("Email chưa được đăng ký!", "error");
     }
   };
 
@@ -151,7 +152,10 @@ const Login = () => {
             </Link>
           </div>
           <div className=" mt-5">
-            <button className=" w-full px-4 py-3 text-xl font-bold text-white bg-primaryColor rounded-2xl shadow-primaryColor hover:shadow-lg hover:opacity-90">
+            <button
+              className=" w-full px-4 py-3 text-xl font-bold text-white bg-primaryColor rounded-2xl shadow-primaryColor hover:shadow-lg hover:opacity-90"
+              onClick={handleLogin}
+            >
               Đăng Nhập
             </button>
           </div>

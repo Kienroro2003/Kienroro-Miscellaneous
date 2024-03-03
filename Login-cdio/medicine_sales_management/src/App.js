@@ -24,6 +24,7 @@ import { TypeMedicineList } from "./user/employee/typeMedicine/TypeMedicineList"
 import { TypeMedicineCreate } from "./user/employee/typeMedicine/TypeMedicineCreate";
 import { BillCreate } from "./user/employee/bill/BillCreate";
 import Login from "./login_logout/Login";
+import Register from "./login_logout/Register";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path={"/login"} element={<Login />}></Route>
+          <Route path={"/register"} element={<Register />}></Route>
           <Route path={"/medicine/list"} element={<MedicineList />}></Route>
           <Route path={"/medicine/create"} element={<MedicineCreate />}></Route>
           <Route

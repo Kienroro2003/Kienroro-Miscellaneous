@@ -1,6 +1,15 @@
 package com.example.medicinesalesmanagement.dto;
 
+import com.example.medicinesalesmanagement.model.Role;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
+
 
 public class EmployeeDto {
     private Integer id_employee;
@@ -12,12 +21,12 @@ public class EmployeeDto {
     private String password;
     private double salary;
     private LocalDateTime dayOfWork;
-    private int role;
+    private Set<Role> role;
 
     public EmployeeDto() {
     }
 
-    public EmployeeDto(Integer id_employee, String name, boolean gender, String phoneNumber, String address, String userName, String password, double salary, LocalDateTime dayOfWork, int role) {
+    public EmployeeDto(Integer id_employee, String name, boolean gender, String phoneNumber, String address, String userName, String password, double salary, LocalDateTime dayOfWork, Set<Role> role) {
         this.id_employee = id_employee;
         this.name = name;
         this.gender = gender;
@@ -28,6 +37,11 @@ public class EmployeeDto {
         this.salary = salary;
         this.dayOfWork = dayOfWork;
         this.role = role;
+    }
+
+    public EmployeeDto(int id, String username, Set<Role> roles) {
+        this.id_employee = id_employee;
+        this.role = roles;
     }
 
     public Integer getId_employee() {
@@ -102,11 +116,11 @@ public class EmployeeDto {
         this.dayOfWork = dayOfWork;
     }
 
-    public int getRole() {
+    public Set<Role> getRole() {
         return role;
     }
 
-    public void setRole(int role) {
+    public void setRole(Set<Role> role) {
         this.role = role;
     }
 }

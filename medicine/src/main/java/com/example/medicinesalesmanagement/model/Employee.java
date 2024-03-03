@@ -3,12 +3,18 @@ package com.example.medicinesalesmanagement.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+
 
 @Entity
+@Table(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +27,9 @@ public class Employee {
     private String password;
     private double salary;
     private LocalDateTime dayOfWork;
-    private int role;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_roles",joinColumns = @JoinColumn(name = "user_id"),inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> role = new HashSet<>();
 //    @JsonIgnore
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
     @JsonBackReference
@@ -34,7 +42,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Integer id_employee, String name, boolean gender, String phoneNumber, String address, String userName, String password, double salary, LocalDateTime dayOfWork, int role, List<Medicine> medicineList, List<Bill> billList) {
+    public Employee(Integer id_employee, String name, boolean gender, String phoneNumber, String address, String userName, String password, double salary, LocalDateTime dayOfWork, Set<Role> role, List<Medicine> medicineList, List<Bill> billList) {
         this.id_employee = id_employee;
         this.name = name;
         this.gender = gender;
@@ -121,11 +129,11 @@ public class Employee {
         this.dayOfWork = dayOfWork;
     }
 
-    public int getRole() {
+    public Set<Role> getRole() {
         return role;
     }
 
-    public void setRole(int role) {
+    public void setRole(Set<Role> role) {
         this.role = role;
     }
 
